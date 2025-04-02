@@ -1,3 +1,6 @@
+/** The type of comparison to use when finding makes. */
+export type MatchType = "full" | "start" | "end" | "contains";
+
 /** Represents a vehicle make record. */
 export interface VehicleMake {
   /** The name of the make. */
