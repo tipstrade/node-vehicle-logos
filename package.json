@@ -11,7 +11,7 @@
     "prebuild": "npm run build-makes && npm run lint",
     "build": "tsc",
     "test": "jasmine --config=jasmine.json --random=false",
-    "publish": "npm run lint && npm run test && npm run && npm publish"
+    "publish": "npm run lint && npm run test && npm publish"
   },
   "repository": {
     "type": "git",
