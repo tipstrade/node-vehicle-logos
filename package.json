@@ -11,7 +11,8 @@
     "prebuild": "npm run build-makes && npm run lint",
     "build": "tsc",
     "test": "jasmine --config=jasmine.json --random=false",
-    "prepublishOnly": "npm run lint && npm test"
+    "coverage": "typescript-coverage-report",
+    "prepublishOnly": "npm run lint && npm test && npm run coverage"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,8 @@
     "jasmine-terminal-reporter": "^1.0.3",
     "jasmine-ts": "^0.4.0",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "typescript-coverage-report": "^1.1.1"
   },
   "files": [
     "dist/**/*",
