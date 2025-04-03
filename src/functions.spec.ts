@@ -23,40 +23,48 @@ describe("functions", () => {
     it("using built in makes", () => {
       const found = findMake("BMW");
 
-      expect(found).toBeDefined();
-      expect(found?.name).toBe("BMW");
+      expect(found).withContext("BMW returns defined result").toBeDefined();
+      expect(found?.name).withContext("BMW name is valid").toBe("BMW");
+      expect(findMake("XXXXX")).withContext("Not found returns undefined").toBeUndefined();
     });
 
-    it("using 'full' match works", () => {
-      expect(findMake("Lada", "full", MAKES)).toBeUndefined(); // Not found
-      expect(findMake("Volkswagen", "full", MAKES)).toEqual(VW); // Using name
-      expect(findMake("VW", "full", MAKES)).toEqual(VW); // Using alt name
-      expect(findMake("ac", "full", MAKES)).toEqual(AC); // Lower case
-      expect(findMake("AC", "full", MAKES)).toEqual(AC); // Upper case
+    it("not using match", () => {
+      expect(findMake("2020 BMW i8")).withContext("Doesn't find partial using full match").toBeUndefined();
     });
 
-    it("using 'contains' match works", () => {
-      expect(findMake("A Lada Riva", "contains", MAKES)).toBeUndefined(); // Not found
-      expect(findMake("A Volkswagen Golf", "contains", MAKES)).toEqual(VW); // Using name
-      expect(findMake("A VW Golf", "contains", MAKES)).toEqual(VW); // Using alt name
-      expect(findMake("AC", "contains", MAKES)).toEqual(AC);
-      expect(findMake("A cadillac escalade", "contains", MAKES)).toEqual(CADILLAC); // Matches Cadillac even though the AC is first available
+    it("using 'full' match", () => {
+      expect(findMake("Lada", "full", MAKES)).withContext("Doesn't find Lada").toBeUndefined(); // Not found
+      expect(findMake("BMW i8")).withContext("Doesn't find partial using full match").toBeUndefined();
+      expect(findMake("Volkswagen", "full", MAKES)).withContext("Finds Volkswagen").toEqual(VW); // Using name
+      expect(findMake("VW", "full", MAKES)).withContext("Finds Volkswgen using alias").toEqual(VW); // Using alt name
+      expect(findMake("ac", "full", MAKES)).withContext("Finds AC").toEqual(AC); // Lower case
+      expect(findMake("AC", "full", MAKES)).withContext("Finds AC").toEqual(AC); // Upper case
     });
 
-    it("using 'start' match works", () => {
-      expect(findMake("Lada Riva", "start", MAKES)).toBeUndefined(); // Not found
-      expect(findMake("Volkswagen Golf", "start", MAKES)).toEqual(VW); // Using name
-      expect(findMake("VW Golf", "start", MAKES)).toEqual(VW); // Using alt name  
-      expect(findMake("AC", "start", MAKES)).toEqual(AC);
-      expect(findMake("cadillac escalade", "start", MAKES)).toEqual(CADILLAC);
+    it("using 'contains' match", () => {
+      expect(findMake("A Lada Riva", "contains", MAKES)).withContext("Doesn't find Lada").toBeUndefined(); // Not found
+      expect(findMake("A Volkswagen Golf", "contains", MAKES)).withContext("Finds Volkswagen").toEqual(VW); // Using name
+      expect(findMake("A VW Golf", "contains", MAKES)).withContext("Finds Volkswagen using alias").toEqual(VW); // Using alt name
+      expect(findMake("AC", "contains", MAKES)).withContext("Finds AC").toEqual(AC);
+      expect(findMake("A cadillac escalade", "contains", MAKES)).withContext("Finds AC").toEqual(CADILLAC); // Matches Cadillac even though the AC is first available
     });
 
-    it("using 'end' match works", () => {
-      expect(findMake("My Lada", "end", MAKES)).toBeUndefined(); // Not found
-      expect(findMake("My Volkswagen", "end", MAKES)).toEqual(VW); // Using name
-      expect(findMake("My VW", "end", MAKES)).toEqual(VW); // Using alt name  
-      expect(findMake("AC", "end", MAKES)).toEqual(AC);
-      expect(findMake("My cadillac", "end", MAKES)).toEqual(CADILLAC); // Matches Cadillac even though the AC is first available
+    it("using 'start' match", () => {
+      expect(findMake("Lada Riva", "start", MAKES)).withContext("Doesn't find Lada").toBeUndefined(); // Not found
+      expect(findMake("2020 BMW")).withContext("Doesn't find partial using full match").toBeUndefined();
+      expect(findMake("Volkswagen Golf", "start", MAKES)).withContext("Finds Volkswagen").toEqual(VW); // Using name
+      expect(findMake("VW Golf", "start", MAKES)).withContext("Finds Volkswagen using alias").toEqual(VW); // Using alt name  
+      expect(findMake("AC", "start", MAKES)).withContext("Finds AC").toEqual(AC);
+      expect(findMake("cadillac escalade", "start", MAKES)).withContext("Finds AC").toEqual(CADILLAC);
+    });
+
+    it("using 'end' match", () => {
+      expect(findMake("My Lada", "end", MAKES)).withContext("Doesn't find Lada").toBeUndefined(); // Not found
+      expect(findMake("BMW i8")).withContext("Doesn't find partial using full match").toBeUndefined();
+      expect(findMake("My Volkswagen", "end", MAKES)).withContext("Finds Volkswagen").toEqual(VW); // Using name
+      expect(findMake("My VW", "end", MAKES)).withContext("Finds Volkswagen using alias").toEqual(VW); // Using alt name  
+      expect(findMake("AC", "end", MAKES)).withContext("Finds AC").toEqual(AC);
+      expect(findMake("My cadillac", "end", MAKES)).withContext("Finds AC").toEqual(CADILLAC); // Matches Cadillac even though the AC is first available
     });
   });
 });

@@ -8,11 +8,11 @@ import { MatchType, VehicleMake } from "./types";
  * @param makes The optional list of VehicleMake objects, if not provided the internal list is used
  * @returns The VehicleMake if found, or undefined
  */
-export function findMake(text: string, match: MatchType = "full", makes?: ReadonlyArray<Readonly<VehicleMake>>): Readonly<VehicleMake> | undefined {
+export function findMake(text: string, match: MatchType = "full", makes?: Iterable<Readonly<VehicleMake>>): Readonly<VehicleMake> | undefined {
   text = text.toLocaleUpperCase();
   makes ??= VehicleMakes;
 
-  const allMatches = makes.reduce((accum, make) => {
+  const allMatches = Array.from(makes).reduce((accum, make) => {
     const allNames = [
       make.name.toLocaleUpperCase(),
       ...make.altNames?.map((x) => x.toLocaleUpperCase()) ?? [],
