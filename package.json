@@ -1,6 +1,6 @@
 {
   "name": "node-vehicle-logos",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A collection of vehicle manufacturer logos",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
     "prebuild": "npm run build-makes && npm run lint",
     "build": "tsc",
     "test": "jasmine --config=jasmine.json --random=false",
-    "publish": "npm run lint && npm run test && npm publish"
+    "prepublishOnly": "npm run lint && npm test"
   },
   "repository": {
     "type": "git",

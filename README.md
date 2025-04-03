@@ -13,7 +13,7 @@ In some cases where a logo may contain text, there may also be _"short"_ version
 ## Chevrolet
 | rolls-royce | rolls-royce-short |
 | ----------| --------------- |
-| ![rolls-royce](https://raw.githubusercontent.com/tipstrade/node-vehicle-logos/refs/heads/main/assets/rolls-royce.svg?token=GHSAT0AAAAAAC4FBQALME2IEQPYQCYEQKTWZ7ONXOQ) | ![rolls-royce-short](https://raw.githubusercontent.com/tipstrade/node-vehicle-logos/refs/heads/main/assets/rolls-royce-short.svg?token=GHSAT0AAAAAAC4FBQAK2FJRJ5SFB4GNXDZAZ7ONX3A) |
+| ![rolls-royce](/assets/rolls-royce.svg) | ![rolls-royce-short](/assets/rolls-royce-short.svg) |
 
 # Typescript library
 The package also includes some typescript helpers and constants:
