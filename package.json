@@ -1,6 +1,7 @@
 {
   "name": "node-vehicle-logos",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "A collection of vehicle manufacturer logos",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "commonjs",
@@ -9,16 +10,22 @@
     "lint": "eslint ./src --ext .ts",
     "prebuild": "npm run build-makes && npm run lint",
     "build": "tsc",
-    "pretest": "npm run build",
-    "test": "jasmine --config=jasmine.json --random=false"
+    "test": "jasmine --config=jasmine.json --random=false",
+    "publish": "npm run lint && npm run test && npm run && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tipstrade/node-vehicle-logos.git"
   },
+  "keywords": [
+    "Node",
+    "Motortrade",
+    "Manufacturer",
+    "Vehicle",
+    "Logos"
+  ],
   "author": "John Bayly",
   "license": "MIT",
-  "description": "",
   "bugs": {
     "url": "https://github.com/tipstrade/node-vehicle-logos/issues"
   },
