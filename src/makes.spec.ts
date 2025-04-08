@@ -1,9 +1,9 @@
 import { existsSync } from "fs";
 import { join } from "path";
-// import rawMakes from "../assets/makes.json";
 import { VehicleMakes } from "./makes";
 
-const rawMakes = (require as unknown as (path: string) => typeof VehicleMakes)("../assets/makes.json");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const rawMakes = require("../assets/makes.json") as typeof VehicleMakes;
 
 const validString = /^(?!\s)(?!.*\s\s).*(?<!\s)$/; // Any characters, but cannot start or end with whitespace. No double whitespace
 const validLogo = /^(?!-)(?!.*--)[a-z0-9-]+(?<!-)$/ // lowercase, numbers or hyphens, cannot start or end with hyphens. No double hyphens
