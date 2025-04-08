@@ -15,6 +15,12 @@ In some cases where a logo may contain text, there may also be _"short"_ version
 | ----------| --------------- |
 | ![rolls-royce](/assets/rolls-royce.svg) | ![rolls-royce-short](/assets/rolls-royce-short.svg) |
 
+## Additional assets
+In addition, there are some SVG assets for generic vehicle types:
+- [bikes.svg](/assets/bikes.svg)
+- [commercial.svg](/assets/commercial.svg)
+- [vehicles.svg](/assets/vehicles.svg)
+
 # Typescript library
 The package also includes some typescript helpers and constants:
 ## VehicleMakes
