@@ -10,7 +10,7 @@ npm i node-vehicle-logos
 # Logo Assets
 The [assets](/assets) directory contains SVGs of all the available logos. There is also [makes.json](/assets/makes.json) file which contains the definition for each make, including possible alternative names.
 In some cases where a logo may contain text, there may also be _"short"_ version. For example
-## Chevrolet
+## Standard vs Short
 | rolls-royce | rolls-royce-short |
 | ----------| --------------- |
 | ![rolls-royce](/assets/rolls-royce.svg) | ![rolls-royce-short](/assets/rolls-royce-short.svg) |
