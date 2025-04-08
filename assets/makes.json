@@ -367,6 +367,14 @@
     "logo": "mitsubishi"
   },
   {
+    "name": "MK Sportscars",
+    "logo": "mk-sportscars",
+    "shortLogo": "mk-sportscars-short",
+    "altNames": [
+      "MK"
+    ]
+  },
+  {
     "name": "Morgan",
     "logo": "morgan"
   },
