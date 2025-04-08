@@ -6,15 +6,13 @@
   "types": "dist/index.d.ts",
   "type": "commonjs",
   "scripts": {
-    "postinstall": "husky init",
     "build-makes": "node ./build-makes.js",
     "lint": "eslint ./src --ext .ts",
     "prebuild": "npm run build-makes && npm run lint",
     "build": "tsc",
     "test": "jasmine --config=jasmine.json --random=false",
     "coverage": "typescript-coverage-report",
-    "prepublishOnly": "npm run lint && npm test && npm run coverage",
-    "prepare": "husky"
+    "prepublishOnly": "npm run lint && npm test && npm run coverage"
   },
   "repository": {
     "type": "git",
