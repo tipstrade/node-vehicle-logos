@@ -30,16 +30,15 @@ This is an the list of definitions from [makes.json](/assets/makes.json) exporte
 ### findMake
 `findMake` is a function that can take a string and find the best matching make using the `VehicleMake.name` and `VehicleMake.altNames`. It can also take:
 - an optional `MatchType` property to specify what kind of match to use. Defaults to `full` if not specified
-- an optional `VehicleMake` list instead of using the built-in list
 
 ##### Usage
 ```ts
-import { findMake, MatchType, VehicleMake } from "node-vehicle-logos";
+import { findMake, MatchType, VehicleMake, VehicleMakes } from "node-vehicle-logos";
 
-const bmw1 = findMake("BMW");
-const bmw2 = findMake("2020 BMW i8", "contains");
-const bmw3 = findMake("BMW i8", "start");
-const bmw4 = findMake("2020 BMW", "end");
+const bmw1 = findMake("BMW", VehicleMakes);
+const bmw2 = findMake("2020 BMW i8", VehicleMakes, "contains");
+const bmw3 = findMake("BMW i8", VehicleMakes, "start");
+const bmw4 = findMake("2020 BMW", VehicleMakes, "end");
 
-const notFound = findMake("BMW i8"); // Returns undefined as 'BMW i8' is not a full match
+const notFound = findMake("BMW i8", VehicleMakes); // Returns undefined as 'BMW i8' is not a full match
 ```
