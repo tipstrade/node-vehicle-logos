@@ -1,6 +1,6 @@
 {
   "name": "node-vehicle-logos",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "A collection of vehicle manufacturer logos",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
