@@ -1,9 +1,7 @@
+import { expect } from "chai";
 import { readdirSync } from "fs";
 import { join } from "path";
-import { VehicleMakes } from "./makes";
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const rawMakes = require("../assets/makes.json") as typeof VehicleMakes;
+import rawMakes from "../assets/makes.json";
 
 // These are the allowed assets that don't trigger an orphaned test
 const allowedAssets = ["makes.json", "bikes.svg", "commercial.svg", "vehicles.svg"];
@@ -17,7 +15,7 @@ describe("assets", () => {
 
         const found = rawMakes.find((x) => x.logo === fileName || x.shortLogo === fileName);
 
-        expect(found).withContext(`'assets/${fileName}.svg' exists`).toBeDefined();
+        expect(found, `'assets/${fileName}.svg' exists`).to.not.be.undefined;
       })
       ;
   });
