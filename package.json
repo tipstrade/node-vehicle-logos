@@ -1,10 +1,11 @@
 {
   "name": "node-vehicle-logos",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A collection of vehicle manufacturer logos",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "commonjs",
+  "sideEffects": false,
   "scripts": {
     "build-makes": "node ./build-makes.js",
     "lint": "eslint ./src --ext .ts",
