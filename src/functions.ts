@@ -1,18 +1,22 @@
-import { VehicleMakes } from "./makes";
 import { MatchType, VehicleMake } from "./types";
 
 /**
- * Finds the make that best matches the specified name.
+ * Finds the make that best matches the specified name in the provided list of makes.
  * @param text The text to search
+ * @param makes The list of VehicleMake objects. An internal list is provided by {@link VehicleMakes}
  * @param [match="full"] The type of match to execute
- * @param makes The optional list of VehicleMake objects, if not provided the internal list is used
  * @returns The VehicleMake if found, or undefined
  */
-export function findMake(text: string, match: MatchType = "full", makes?: Iterable<Readonly<VehicleMake>>): Readonly<VehicleMake> | undefined {
+export function findMake(text: string, makes: Iterable<Readonly<VehicleMake>>, match: MatchType = "full"): Readonly<VehicleMake> | undefined {
   text = text.toLocaleUpperCase();
-  makes ??= VehicleMakes;
 
-  const allMatches = Array.from(makes).reduce((accum, make) => {
+  // Instead of using reduce or keeping track of all matches, track the best match only
+  const bestMatch = {
+    name: "",
+    make: undefined as Readonly<VehicleMake> | undefined,
+  };
+
+  for (const make of makes) {
     const allNames = [
       make.name.toLocaleUpperCase(),
       ...make.altNames?.map((x) => x.toLocaleUpperCase()) ?? [],
@@ -25,19 +29,12 @@ export function findMake(text: string, match: MatchType = "full", makes?: Iterab
         || (match === "start" && text.startsWith(name))
         ;
 
-      if (found) {
-        accum.set(name, make);
+      if (found && name.length > bestMatch.name.length) {
+        bestMatch.name = name;
+        bestMatch.make = make;
       }
     });
-
-    return accum;
-  }, new Map<string, Readonly<VehicleMake>>);
-
-  if (!allMatches.size) {
-    return undefined;
   }
 
-  const longestMatch = [...allMatches.keys()].sort((a, b) => b.length - a.length)[0];
-
-  return allMatches.get(longestMatch);
+  return bestMatch.make;
 }
