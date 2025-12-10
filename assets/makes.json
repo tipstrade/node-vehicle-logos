@@ -76,16 +76,17 @@
     "logo": "cadillac"
   },
   {
-    "name": "Camper Vans",
-    "logo": "camper"
-  },
-  {
     "name": "Can-Am",
     "logo": "can-am"
   },
   {
     "name": "Caterham",
     "logo": "caterham"
+  },
+  {
+    "name": "Chery",
+    "logo": "chery",
+    "shortLogo": "chery-short"
   },
   {
     "name": "Chesil",
@@ -379,6 +380,10 @@
     "logo": "morgan"
   },
   {
+    "name": "Moke",
+    "logo": "moke"
+  },
+  {
     "name": "Morris",
     "logo": "morris"
   },
@@ -534,6 +539,11 @@
   {
     "name": "Westfield",
     "logo": "westfield"
+  },
+  {
+    "name": "Xpeng",
+    "logo": "xpeng",
+    "shortLogo": "xpeng-short"
   },
   {
     "name": "Yamaha",

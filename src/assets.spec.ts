@@ -4,7 +4,7 @@ import { join } from "path";
 import rawMakes from "../assets/makes.json";
 
 // These are the allowed assets that don't trigger an orphaned test
-const allowedAssets = ["makes.json", "bikes.svg", "commercial.svg", "vehicles.svg"];
+const allowedAssets = ["makes.json", "bikes.svg", "camper.svg", "commercial.svg", "vehicles.svg"];
 
 describe("assets", () => {
   it("has no orphaned assets", () => {
