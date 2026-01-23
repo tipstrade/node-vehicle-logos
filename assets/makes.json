@@ -38,6 +38,10 @@
     "shortLogo": "ariel-short"
   },
   {
+    "name": "Asia",
+    "logo": "asia"
+  },
+  {
     "name": "Aston Martin",
     "logo": "aston-martin"
   },
@@ -65,7 +69,8 @@
   },
   {
     "name": "Bugatti",
-    "logo": "bugatti"
+    "logo": "bugatti",
+    "shortLogo": "bugatti-short"
   },
   {
     "name": "BYD",
@@ -82,6 +87,10 @@
   {
     "name": "Caterham",
     "logo": "caterham"
+  },
+  {
+    "name": "Changan",
+    "logo": "changan"
   },
   {
     "name": "Chery",
@@ -125,6 +134,11 @@
     "logo": "daewoo"
   },
   {
+    "name": "Daihatsu",
+    "logo": "daihatsu",
+    "shortLogo": "daihatsu-short"
+  },
+  {
     "name": "Daimler",
     "logo": "daimler"
   },
@@ -135,7 +149,8 @@
   },
   {
     "name": "DFSK",
-    "logo": "dfsk"
+    "logo": "dfsk",
+    "shortLogo": "dfsk-short"
   },
   {
     "name": "Dodge",
@@ -179,11 +194,13 @@
   },
   {
     "name": "Genesis",
-    "logo": "genesis"
+    "logo": "genesis",
+    "shortLogo": "genesis-short"
   },
   {
     "name": "Great Wall",
-    "logo": "great-wall"
+    "logo": "great-wall",
+    "shortLogo": "great-wall-short"
   },
   {
     "name": "GWM ORA",
@@ -196,7 +213,12 @@
   },
   {
     "name": "Honda",
-    "logo": "honda"
+    "logo": "honda",
+    "shortLogo": "honda-short"
+  },
+  {
+    "name": "HMC",
+    "logo": "hmc"
   },
   {
     "name": "Hummer",
@@ -204,7 +226,8 @@
   },
   {
     "name": "Hyundai",
-    "logo": "hyundai"
+    "logo": "hyundai",
+    "shortLogo": "hyundai-short"
   },
   {
     "name": "Ineos",
@@ -230,8 +253,7 @@
   },
   {
     "name": "Jaguar",
-    "logo": "jaguar",
-    "shortLogo": "jaguar-short"
+    "logo": "jaguar"
   },
   {
     "name": "Jeep",
@@ -259,6 +281,10 @@
     "logo": "ktm"
   },
   {
+    "name": "Lada",
+    "logo": "lada"
+  },
+  {
     "name": "Lamborghini",
     "logo": "lamborghini"
   },
@@ -275,13 +301,19 @@
     "logo": "ldv"
   },
   {
+    "name": "Leapmotor",
+    "logo": "leapmotor",
+    "shortLogo": "leapmotor-short"
+  },
+  {
     "name": "LEVC",
     "logo": "levc",
     "shortLogo": "levc-short"
   },
   {
     "name": "Lexus",
-    "logo": "lexus"
+    "logo": "lexus",
+    "shortLogo": "lexus-short"
   },
   {
     "name": "Lister",
@@ -324,7 +356,8 @@
   },
   {
     "name": "McLaren",
-    "logo": "mclaren"
+    "logo": "mclaren",
+    "shortLogo": "mclaren-short"
   },
   {
     "name": "Mercedes-Benz",
@@ -376,6 +409,10 @@
     ]
   },
   {
+    "name": "MNR",
+    "logo": "mnr"
+  },
+  {
     "name": "Morgan",
     "logo": "morgan"
   },
@@ -402,6 +439,10 @@
   {
     "name": "Omoda",
     "logo": "omoda"
+  },
+  {
+    "name": "Pagani",
+    "logo": "pagani"
   },
   {
     "name": "Perodua",
@@ -485,7 +526,8 @@
   },
   {
     "name": "Subaru",
-    "logo": "subaru"
+    "logo": "subaru",
+    "shortLogo": "subaru-short"
   },
   {
     "name": "Suzuki",
@@ -523,7 +565,8 @@
   },
   {
     "name": "Vauxhall",
-    "logo": "vauxhall"
+    "logo": "vauxhall",
+    "shortLogo": "vauxhall-short"
   },
   {
     "name": "Volkswagen",
