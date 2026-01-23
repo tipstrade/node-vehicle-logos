@@ -8,15 +8,21 @@ const allowedAssets = ["makes.json", "bikes.svg", "camper.svg", "commercial.svg"
 
 describe("assets", () => {
   it("has no orphaned assets", () => {
-    readdirSync(join("assets"))
+    const orphanedAssets = readdirSync(join("assets"))
       .filter((x) => !allowedAssets.includes(x))
-      .forEach((fileName) => {
+      .map((fileName) => {
         fileName = fileName.replace(/\.svg$/, "");
 
         const found = rawMakes.find((x) => x.logo === fileName || x.shortLogo === fileName);
 
-        expect(found, `'assets/${fileName}.svg' exists`).to.not.be.undefined;
+        return found ? null : fileName
       })
+      .filter(Boolean)
       ;
+
+    expect(
+      orphanedAssets,
+      `Orphaned assets found:\n${orphanedAssets.map((x) => `- assets/${x}`).join("\n")}\n`
+    ).to.be.empty;
   });
 });
