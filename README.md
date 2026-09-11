@@ -7,6 +7,26 @@ A collection of vehicle manufacturer logos. All logos are registered trademarks 
 npm i node-vehicle-logos
 ```
 
+
+
+# Steps to complete a change
+
+1. Build the solution:
+	```bash
+	npm run build
+	```
+2. Run the tests:
+	```bash
+	npm test
+	```
+3. Commit the change:
+	```bash
+	git add .
+	git commit -m "Describe the change"
+	```
+Run the test before committing. All changes must pass before they can be committed.
+
+
 # Logo Assets
 The [assets](/assets) directory contains SVGs of all the available logos. There is also [makes.json](/assets/makes.json) file which contains the definition for each make, including possible alternative names.
 In some cases where a logo may contain text, there may also be _"short"_ version. For example
