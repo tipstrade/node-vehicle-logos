@@ -13,6 +13,10 @@
     "logo": "ac"
   },
   {
+    "name": "Aion",
+    "logo": "aion"
+  },
+  {
     "name": "Aixam",
     "logo": "aixam"
   },
@@ -53,6 +57,10 @@
   {
     "name": "Austin",
     "logo": "austin"
+  },
+  {
+    "name": "Bac",
+    "logo": "bac"
   },
   {
     "name": "Bentley",
@@ -191,6 +199,10 @@
     "name": "Gas",
     "logo": "gas",
     "shortLogo": "gas-short"
+  },
+  {
+    "name": "Geely",
+    "logo": "geely"
   },
   {
     "name": "Genesis",
@@ -513,6 +525,11 @@
   {
     "name": "Skoda",
     "logo": "skoda"
+  },
+  {
+    "name": "Skywell",
+    "logo": "skywell",
+    "shortLogo": "skywell-short"
   },
   {
     "name": "Smart",
